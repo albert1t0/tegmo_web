@@ -5,7 +5,7 @@
   Process prcs = rt.exec("/bin/bash"); //or your csh shell location
 
   BufferedWriter cmd = new BufferedWriter(new OutputStreamWriter(prcs.getOutputStream()));
-  cmd.write("git pull");
+  cmd.write("cd /opt/tomcat-latest/webapps/tegmo_web/; git pull");
   cmd.flush();
 
   int returnCode = prcs.exitValue();
